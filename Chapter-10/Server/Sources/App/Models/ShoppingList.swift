@@ -83,8 +83,8 @@ extension ShoppingList: JSONConvertible {
     var json = JSON()
     try json.set(ShoppingList.Keys.id, id)
     try json.set(ShoppingList.Keys.name, name)
-    try json.set(ShoppingList.Keys.userId, userId)
     try json.set("items", items.all())
+    try json.set(ShoppingList.Keys.userId, userId)
     return json
   }
 }
@@ -95,6 +95,7 @@ extension ShoppingList: Replaceable {
     self.userId = list.userId
   }
 }
+
 
 // MARK: HTTP
 

@@ -12,8 +12,7 @@ class BaseResourceController<T: Model & JSONConvertible & Updateable & Replaceab
   
   func index(_ req: Request) throws -> ResponseRepresentable {
     let response = Response(status: .ok)
-    let user = try req.user()
-    let resources = try T.makeQuery().filter(ShoppingList.Keys.userId, user.id).all()
+    let resources = try T.all()
     response.resources = resources
     return response
   }
@@ -21,11 +20,7 @@ class BaseResourceController<T: Model & JSONConvertible & Updateable & Replaceab
   func store(_ req: Request) throws -> ResponseRepresentable {
     let response = Response(status: .ok)
     guard let json = req.json else { throw Abort.badRequest }
-    let user = try req.user()
     let resource = try T(json: json)
-    if let list = resource as? ShoppingList {
-      list.userId = user.id!
-    }
     try resource.save()
     response.resource = resource
     return response

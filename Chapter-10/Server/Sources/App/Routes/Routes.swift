@@ -17,17 +17,17 @@ extension Droplet {
         !email.isEmpty,
         let password = form["password"]?.string,
         !password.isEmpty else {
-        throw Abort(.badRequest)
+          throw Abort(.badRequest)
       }
-  
+      
       guard try User.makeQuery().filter("email", email).first() == nil else {
         throw Abort(.badRequest, reason: "A user with that email already exists.")
       }
-  
+      
       let encryptedPassword = try self.hash.make(password.makeBytes()).makeString()
       let user = User(name: name, email: email, password: encryptedPassword)
       try user.save()
-  
+      
       return "User Account Created Successfully"
     }
   }
@@ -38,7 +38,6 @@ extension Droplet {
     let persistMiddleware = PersistMiddleware(User.self)
     let sessionsMiddleware = SessionsMiddleware(memory)
     let redirect = RedirectMiddleware.login(path: "/")
-    let tokenMiddleware = TokenAuthenticationMiddleware(User.self)
     let shoppingListController = ShoppingListController(view)
     let itemController = ItemController(view)
     
@@ -70,7 +69,7 @@ extension Droplet {
       return Response(redirect: "/")
     }
     
-    // Routes for API for native Apps
+    let tokenMiddleware = TokenAuthenticationMiddleware(User.self)
     let tokenAuthRoutes = grouped(tokenMiddleware)
     tokenAuthRoutes.resource("api/shopping_lists", shoppingListController)
     tokenAuthRoutes.resource("api/items", itemController)
@@ -78,12 +77,12 @@ extension Droplet {
     // Route to get Token after authentication
     grouped(passwordMiddleware)
       .post("token") { req in
-      let user = try req.user()
-      let existingToken = try Token.makeQuery().filter(Token.Keys.userId, user.id).first()
-      let token = try Token.generate(for: user)
-      try token.save()
-      try existingToken?.delete()
-      return token
+        let user = try req.user()
+        let existingToken = try Token.makeQuery().filter(Token.Keys.userId, user.id).first()
+        let token = try Token.generate(for: user)
+        try token.save()
+        try existingToken?.delete()
+        return token
     }
   }
 }

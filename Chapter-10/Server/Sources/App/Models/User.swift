@@ -11,7 +11,7 @@ final class User: Model, SessionPersistable, TokenAuthenticatable {
     static let email = "email"
     static let password = "password"
   }
-
+  
   var name: String
   var email: String
   var password: String
@@ -22,13 +22,13 @@ final class User: Model, SessionPersistable, TokenAuthenticatable {
     self.email = email
     self.password = password
   }
-
+  
   init(row: Row) throws {
     name = try row.get(Keys.name)
     email = try row.get(Keys.email)
     password = try row.get(Keys.password)
   }
-
+  
   func makeRow() throws -> Row {
     var row = Row()
     try row.set(Keys.name, name)
@@ -51,12 +51,6 @@ extension User: PasswordAuthenticatable {
 
 private var _userPasswordVerifier: PasswordVerifier? = nil
 
-extension Request {
-  func user() throws -> User {
-    return try auth.assertAuthenticated()
-  }
-}
-
 extension User: Preparation {
   /// Prepares a table/collection in the database
   /// for storing Player
@@ -74,33 +68,8 @@ extension User: Preparation {
   }
 }
 
-// MARK: JSON
-
-// How the model converts from / to JSON.
-// For example when:
-//     - Creating a new Player
-//     - Fetching a Player
-//
-extension User: JSONConvertible {
-  convenience init(json: JSON) throws {
-    try self.init(
-      name: json.get(Keys.name),
-      email: json.get(Keys.email),
-      password: json.get(Keys.password)
-    )
-  }
-  
-  func makeJSON() throws -> JSON {
-    var json = JSON()
-    try json.set(Keys.id, id)
-    try json.set(Keys.name, name)
-    try json.set(Keys.email, email)
-    return json
+extension Request {
+  func user() throws -> User {
+    return try auth.assertAuthenticated()
   }
 }
-
-// MARK: HTTP
-
-// This allows Player models to be returned
-// directly in route closures
-extension User: ResponseRepresentable { }
