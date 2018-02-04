@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginTableViewController: UIViewController {
+class LoginViewController: UIViewController {
   
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
@@ -28,7 +28,7 @@ class LoginTableViewController: UIViewController {
   @IBAction func didSelectLoginButton(_ sender: UIButton) {
     let emailPassword = "\(emailField.text!):\(passwordField.text!)"
     let base64EncodedEmailPassword = Data(emailPassword.utf8).base64EncodedString()
-    request(url: "/token",
+    request(url: "/tokens",
             httpMethod: "POST",
             httpHeaders: ["Authorization": "Basic \(base64EncodedEmailPassword)"]) {
               data, _, _ in

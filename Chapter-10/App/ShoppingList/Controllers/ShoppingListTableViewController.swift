@@ -3,7 +3,7 @@ import UIKit
 class ShoppingListTableViewController: BaseTableViewController {
   
   var lists: [ShoppingList] = []
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

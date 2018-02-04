@@ -76,7 +76,7 @@ extension Droplet {
     
     // Route to get Token after authentication
     grouped(passwordMiddleware)
-      .post("token") { req in
+      .post("api/tokens") { req in
         let user = try req.user()
         let existingToken = try Token.makeQuery().filter(Token.Keys.userId, user.id).first()
         let token = try Token.generate(for: user)
