@@ -35,8 +35,8 @@ class LoginViewController: UIViewController {
       do {
         let decoder = JSONDecoder()
         let token = try decoder.decode(Token.self, from: data!)
-        let encoder = try? PropertyListEncoder().encode(token)
-        UserDefaults.standard.set(encoder, forKey: String(describing: Token.self))
+        let data = try? PropertyListEncoder().encode(token)
+        UserDefaults.standard.set(data, forKey: String(describing: Token.self))
         UserDefaults.standard.synchronize()
         self.passwordField.text = ""
         self.performSegue(withIdentifier: "showShoppingList", sender: self)

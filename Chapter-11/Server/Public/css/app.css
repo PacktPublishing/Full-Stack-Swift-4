@@ -77,12 +77,12 @@ body {
   flex: 1;
 }
 
-.heading {
-  text-align: center;
-}
-
 .grid-x {
   justify-content: center;
+}
+
+div.columns {
+  align-self: center;
 }
 
 form.columns {

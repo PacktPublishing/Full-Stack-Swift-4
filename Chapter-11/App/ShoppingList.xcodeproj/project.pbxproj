@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9226206F202A8CF7001D2A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226206E202A8CF7001D2A9B /* AppDelegate.swift */; };
+		92262074202A8CF7001D2A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92262072202A8CF7001D2A9B /* Main.storyboard */; };
+		92262076202A8CF7001D2A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92262075202A8CF7001D2A9B /* Assets.xcassets */; };
+		9226207C202A961D001D2A9B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928188371FE19B3900518AAD /* Request.swift */; };
+		9226207D202A96C9001D2A9B /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A489441F99239100C6DE2B /* ItemTableViewController.swift */; };
+		9226207E202A96CB001D2A9B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0701FA3D08800BF9017 /* BaseTableViewController.swift */; };
+		9226207F202A96CE001D2A9B /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0741FA3D96400BF9017 /* ShoppingListTableViewController.swift */; };
+		92262080202A96D0001D2A9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284F08F202250610000778E /* LoginViewController.swift */; };
+		92262081202A96D4001D2A9B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A489411F9921B900C6DE2B /* Item.swift */; };
+		92262082202A96D8001D2A9B /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0721FA3D1EA00BF9017 /* ShoppingList.swift */; };
+		92262083202A96DD001D2A9B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284F091202254490000778E /* Token.swift */; };
 		9238A0711FA3D08800BF9017 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0701FA3D08800BF9017 /* BaseTableViewController.swift */; };
 		9238A0731FA3D1EA00BF9017 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0721FA3D1EA00BF9017 /* ShoppingList.swift */; };
 		9238A0751FA3D96400BF9017 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0741FA3D96400BF9017 /* ShoppingListTableViewController.swift */; };
-		924B9308200D597B000AA1CC /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924B9307200D597B000AA1CC /* LoginTableViewController.swift */; };
-		924B930A200D5AA9000AA1CC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924B9309200D5AA9000AA1CC /* Token.swift */; };
-		9271C7D4200FA5D400CB6F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271C7D3200FA5D400CB6F80 /* AppDelegate.swift */; };
-		9271C7D9200FA5D400CB6F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9271C7D7200FA5D400CB6F80 /* Main.storyboard */; };
-		9271C7DB200FA5D400CB6F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9271C7DA200FA5D400CB6F80 /* Assets.xcassets */; };
-		9271C7E0200FA9DB00CB6F80 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924B9307200D597B000AA1CC /* LoginTableViewController.swift */; };
-		9271C7E1200FA9DE00CB6F80 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0741FA3D96400BF9017 /* ShoppingListTableViewController.swift */; };
-		9271C7E2200FA9E300CB6F80 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0701FA3D08800BF9017 /* BaseTableViewController.swift */; };
-		9271C7E3200FA9E600CB6F80 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A489441F99239100C6DE2B /* ItemTableViewController.swift */; };
-		9271C7E4200FA9E900CB6F80 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928188371FE19B3900518AAD /* Request.swift */; };
-		9271C7E5200FA9EF00CB6F80 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A489411F9921B900C6DE2B /* Item.swift */; };
-		9271C7E6200FA9F100CB6F80 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238A0721FA3D1EA00BF9017 /* ShoppingList.swift */; };
-		9271C7E7200FA9F400CB6F80 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924B9309200D5AA9000AA1CC /* Token.swift */; };
 		928188381FE19B3900518AAD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928188371FE19B3900518AAD /* Request.swift */; };
+		9284F090202250610000778E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284F08F202250610000778E /* LoginViewController.swift */; };
+		9284F092202254490000778E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284F091202254490000778E /* Token.swift */; };
 		92A4892D1F9920F200C6DE2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A4892C1F9920F200C6DE2B /* AppDelegate.swift */; };
 		92A489321F9920F200C6DE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A489301F9920F200C6DE2B /* Main.storyboard */; };
 		92A489341F9920F200C6DE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A489331F9920F200C6DE2B /* Assets.xcassets */; };
@@ -33,17 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9226206C202A8CF7001D2A9B /* ShoppingListTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9226206E202A8CF7001D2A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92262073202A8CF7001D2A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92262075202A8CF7001D2A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92262077202A8CF7001D2A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9238A0701FA3D08800BF9017 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9238A0721FA3D1EA00BF9017 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		9238A0741FA3D96400BF9017 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
-		924B9307200D597B000AA1CC /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
-		924B9309200D5AA9000AA1CC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		9271C7D1200FA5D400CB6F80 /* ShoppingListTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9271C7D3200FA5D400CB6F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9271C7D8200FA5D400CB6F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9271C7DA200FA5D400CB6F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9271C7DC200FA5D400CB6F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928188371FE19B3900518AAD /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9284F08F202250610000778E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9284F091202254490000778E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		92A489291F9920F200C6DE2B /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A4892C1F9920F200C6DE2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A489311F9920F200C6DE2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9271C7CE200FA5D400CB6F80 /* Frameworks */ = {
+		92262069202A8CF7001D2A9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,13 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9271C7D2200FA5D400CB6F80 /* ShoppingListTV */ = {
+		9226206D202A8CF7001D2A9B /* ShoppingListTV */ = {
 			isa = PBXGroup;
 			children = (
-				9271C7D3200FA5D400CB6F80 /* AppDelegate.swift */,
-				9271C7D7200FA5D400CB6F80 /* Main.storyboard */,
-				9271C7DA200FA5D400CB6F80 /* Assets.xcassets */,
-				9271C7DC200FA5D400CB6F80 /* Info.plist */,
+				9226206E202A8CF7001D2A9B /* AppDelegate.swift */,
+				92262072202A8CF7001D2A9B /* Main.storyboard */,
+				92262075202A8CF7001D2A9B /* Assets.xcassets */,
+				92262077202A8CF7001D2A9B /* Info.plist */,
 			);
 			path = ShoppingListTV;
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				92A4892B1F9920F200C6DE2B /* ShoppingList */,
-				9271C7D2200FA5D400CB6F80 /* ShoppingListTV */,
+				9226206D202A8CF7001D2A9B /* ShoppingListTV */,
 				92A4892A1F9920F200C6DE2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				92A489291F9920F200C6DE2B /* ShoppingList.app */,
-				9271C7D1200FA5D400CB6F80 /* ShoppingListTV.app */,
+				9226206C202A8CF7001D2A9B /* ShoppingListTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 			children = (
 				92A489411F9921B900C6DE2B /* Item.swift */,
 				9238A0721FA3D1EA00BF9017 /* ShoppingList.swift */,
-				924B9309200D5AA9000AA1CC /* Token.swift */,
+				9284F091202254490000778E /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 				92A489441F99239100C6DE2B /* ItemTableViewController.swift */,
 				9238A0701FA3D08800BF9017 /* BaseTableViewController.swift */,
 				9238A0741FA3D96400BF9017 /* ShoppingListTableViewController.swift */,
-				924B9307200D597B000AA1CC /* LoginTableViewController.swift */,
+				9284F08F202250610000778E /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,13 +148,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9271C7D0200FA5D400CB6F80 /* ShoppingListTV */ = {
+		9226206B202A8CF7001D2A9B /* ShoppingListTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9271C7DF200FA5D400CB6F80 /* Build configuration list for PBXNativeTarget "ShoppingListTV" */;
+			buildConfigurationList = 9226207A202A8CF7001D2A9B /* Build configuration list for PBXNativeTarget "ShoppingListTV" */;
 			buildPhases = (
-				9271C7CD200FA5D400CB6F80 /* Sources */,
-				9271C7CE200FA5D400CB6F80 /* Frameworks */,
-				9271C7CF200FA5D400CB6F80 /* Resources */,
+				92262068202A8CF7001D2A9B /* Sources */,
+				92262069202A8CF7001D2A9B /* Frameworks */,
+				9226206A202A8CF7001D2A9B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -162,7 +162,7 @@
 			);
 			name = ShoppingListTV;
 			productName = ShoppingListTV;
-			productReference = 9271C7D1200FA5D400CB6F80 /* ShoppingListTV.app */;
+			productReference = 9226206C202A8CF7001D2A9B /* ShoppingListTV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		92A489281F9920F200C6DE2B /* ShoppingList */ = {
@@ -192,7 +192,7 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Encore Dev Labs LLC";
 				TargetAttributes = {
-					9271C7D0200FA5D400CB6F80 = {
+					9226206B202A8CF7001D2A9B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -216,18 +216,18 @@
 			projectRoot = "";
 			targets = (
 				92A489281F9920F200C6DE2B /* ShoppingList */,
-				9271C7D0200FA5D400CB6F80 /* ShoppingListTV */,
+				9226206B202A8CF7001D2A9B /* ShoppingListTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9271C7CF200FA5D400CB6F80 /* Resources */ = {
+		9226206A202A8CF7001D2A9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9271C7DB200FA5D400CB6F80 /* Assets.xcassets in Resources */,
-				9271C7D9200FA5D400CB6F80 /* Main.storyboard in Resources */,
+				92262076202A8CF7001D2A9B /* Assets.xcassets in Resources */,
+				92262074202A8CF7001D2A9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,19 +244,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9271C7CD200FA5D400CB6F80 /* Sources */ = {
+		92262068202A8CF7001D2A9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9271C7E7200FA9F400CB6F80 /* Token.swift in Sources */,
-				9271C7E3200FA9E600CB6F80 /* ItemTableViewController.swift in Sources */,
-				9271C7E6200FA9F100CB6F80 /* ShoppingList.swift in Sources */,
-				9271C7E4200FA9E900CB6F80 /* Request.swift in Sources */,
-				9271C7D4200FA5D400CB6F80 /* AppDelegate.swift in Sources */,
-				9271C7E0200FA9DB00CB6F80 /* LoginTableViewController.swift in Sources */,
-				9271C7E5200FA9EF00CB6F80 /* Item.swift in Sources */,
-				9271C7E2200FA9E300CB6F80 /* BaseTableViewController.swift in Sources */,
-				9271C7E1200FA9DE00CB6F80 /* ShoppingListTableViewController.swift in Sources */,
+				92262080202A96D0001D2A9B /* LoginViewController.swift in Sources */,
+				92262083202A96DD001D2A9B /* Token.swift in Sources */,
+				92262082202A96D8001D2A9B /* ShoppingList.swift in Sources */,
+				9226207C202A961D001D2A9B /* Request.swift in Sources */,
+				9226207E202A96CB001D2A9B /* BaseTableViewController.swift in Sources */,
+				92262081202A96D4001D2A9B /* Item.swift in Sources */,
+				9226207D202A96C9001D2A9B /* ItemTableViewController.swift in Sources */,
+				9226206F202A8CF7001D2A9B /* AppDelegate.swift in Sources */,
+				9226207F202A96CE001D2A9B /* ShoppingListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924B930A200D5AA9000AA1CC /* Token.swift in Sources */,
+				9284F092202254490000778E /* Token.swift in Sources */,
 				92A489421F9921B900C6DE2B /* Item.swift in Sources */,
-				924B9308200D597B000AA1CC /* LoginTableViewController.swift in Sources */,
 				92A489451F99239100C6DE2B /* ItemTableViewController.swift in Sources */,
 				928188381FE19B3900518AAD /* Request.swift in Sources */,
 				9238A0731FA3D1EA00BF9017 /* ShoppingList.swift in Sources */,
+				9284F090202250610000778E /* LoginViewController.swift in Sources */,
 				9238A0711FA3D08800BF9017 /* BaseTableViewController.swift in Sources */,
 				92A4892D1F9920F200C6DE2B /* AppDelegate.swift in Sources */,
 				9238A0751FA3D96400BF9017 /* ShoppingListTableViewController.swift in Sources */,
@@ -279,10 +279,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9271C7D7200FA5D400CB6F80 /* Main.storyboard */ = {
+		92262072202A8CF7001D2A9B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9271C7D8200FA5D400CB6F80 /* Base */,
+				92262073202A8CF7001D2A9B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9271C7DD200FA5D400CB6F80 /* Debug */ = {
+		92262078202A8CF7001D2A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -324,7 +324,7 @@
 			};
 			name = Debug;
 		};
-		9271C7DE200FA5D400CB6F80 /* Release */ = {
+		92262079202A8CF7001D2A9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -482,11 +482,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9271C7DF200FA5D400CB6F80 /* Build configuration list for PBXNativeTarget "ShoppingListTV" */ = {
+		9226207A202A8CF7001D2A9B /* Build configuration list for PBXNativeTarget "ShoppingListTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9271C7DD200FA5D400CB6F80 /* Debug */,
-				9271C7DE200FA5D400CB6F80 /* Release */,
+				92262078202A8CF7001D2A9B /* Debug */,
+				92262079202A8CF7001D2A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

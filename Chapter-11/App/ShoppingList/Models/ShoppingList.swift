@@ -21,7 +21,7 @@ class ShoppingList: Codable {
   }
   
   static func load(onCompletion: @escaping ([ShoppingList]) -> Void) {
-    request(url: "/api/shopping_lists") { data, response, error in
+    request(url: "/shopping_lists") { data, response, error in
       let decoder = JSONDecoder()
       let shoppingLists = try decoder.decode([ShoppingList].self, from: data!)
       onCompletion(shoppingLists)
@@ -29,7 +29,7 @@ class ShoppingList: Codable {
   }
   
   func save(onCompletion: @escaping (ShoppingList) -> Void) {
-    request(url: "/api/shopping_lists", httpMethod: "POST", httpBody: data) { data, _, _ in
+    request(url: "/shopping_lists", httpMethod: "POST", httpBody: data) { data, _, _ in
       let decoder = JSONDecoder()
       let list = try decoder.decode(ShoppingList.self, from: data!)
       onCompletion(list)
@@ -37,13 +37,13 @@ class ShoppingList: Codable {
   }
   
   func delete(onCompletion: @escaping () -> Void) {
-    request(url: "/api/shopping_lists/\(id!)", httpMethod: "DELETE") { data, _, _ in
+    request(url: "/shopping_lists/\(id!)", httpMethod: "DELETE") { data, _, _ in
       onCompletion()
     }
   }
   
   func add(_ item: Item, onCompletion: @escaping () -> Void) {
-    request(url: "/api/items/", httpMethod: "POST", httpBody: item.data) { data, response, error in
+    request(url: "/items/", httpMethod: "POST", httpBody: item.data) { data, response, error in
       let decoder = JSONDecoder()
       let item = try decoder.decode(Item.self, from: data!)
       self.items.append(item)
@@ -53,7 +53,7 @@ class ShoppingList: Codable {
   
   func remove(at index: Int, onCompletion: @escaping () -> Void) {
     let itemId = self.items[index].id!
-    request(url: "/api/items/\(itemId)", httpMethod: "DELETE") { _, _, _ in
+    request(url: "/items/\(itemId)", httpMethod: "DELETE") { _, _, _ in
       self.items.remove(at: index)
       onCompletion()
     }

@@ -1,39 +1,37 @@
 import UIKit
 
 class ShoppingListTableViewController: BaseTableViewController {
-
+  
   var lists: [ShoppingList] = []
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = "Shopping Lists"
-    navigationItem.rightBarButtonItems?.append(editButtonItem)
-
     #if TARGET_OS_IOS
     navigationController?.navigationBar.prefersLargeTitles = true
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(didPullDownForRefresh), for: .valueChanged)
     #endif
 
+    navigationItem.rightBarButtonItems?.append(editButtonItem)
     loadData()
   }
-
+  
   @IBAction func didSelectRefreshButton(_ sender: UIBarButtonItem) {
     loadData()
   }
-
+  
   #if TARGET_OS_IOS
   @objc func didPullDownForRefresh(_ sender: UIRefreshControl) {
     loadData()
   }
   #endif
-
+  
   func loadData() {
     ShoppingList.load() { lists in
       self.lists = lists
       self.tableView.reloadData()
-
       #if TARGET_OS_IOS
       self.refreshControl?.endRefreshing()
       #endif
@@ -59,7 +57,11 @@ class ShoppingListTableViewController: BaseTableViewController {
   @IBAction func didSelectLogoutButton(_ sender: UIBarButtonItem) {
     UserDefaults.standard.removeObject(forKey: String(describing: Token.self))
     UserDefaults.standard.synchronize()
+    #if TARGET_OS_IOS
     self.dismiss(animated: true)
+    #else
+    self.navigationController?.popViewController(animated: true)
+    #endif
   }
 
   // MARK: - Table view data source

@@ -25,8 +25,8 @@ class Item: Codable {
 
 extension Array where Element == ShoppingList {
   func save() {
-    let encoder = try? PropertyListEncoder().encode(self)
-    UserDefaults.standard.set(encoder, forKey: String(describing: Element.self))
+    let data = try? PropertyListEncoder().encode(self)
+    UserDefaults.standard.set(data, forKey: String(describing: Element.self))
     UserDefaults.standard.synchronize()
   }
   

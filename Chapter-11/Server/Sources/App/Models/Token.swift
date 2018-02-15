@@ -9,7 +9,7 @@ final class Token: Model {
   var user: Parent<Token, User> {
     return parent(id: userId)
   }
-
+  
   struct Keys {
     static let id = "id"
     static let token = "token"
@@ -25,7 +25,7 @@ final class Token: Model {
     token = try row.get(Keys.token)
     userId = try row.get(Keys.userId)
   }
-
+  
   func makeRow() throws -> Row {
     var row = Row()
     try row.set(Keys.token, token)

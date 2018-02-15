@@ -8,26 +8,17 @@
 
 import UIKit
 
-class LoginTableViewController: UIViewController {
+class LoginViewController: UIViewController {
   
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.showShoppingList()
-  }
-  
-  private func showShoppingList() {
     if let data = UserDefaults.standard.value(forKey: String(describing: Token.self)) as? Data,
       let _ = try? PropertyListDecoder().decode(Token.self, from: data) {
       self.performSegue(withIdentifier: "showShoppingList", sender: self)
     }
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.showShoppingList()
   }
 
   override func didReceiveMemoryWarning() {
@@ -37,15 +28,15 @@ class LoginTableViewController: UIViewController {
   @IBAction func didSelectLoginButton(_ sender: UIButton) {
     let emailPassword = "\(emailField.text!):\(passwordField.text!)"
     let base64EncodedEmailPassword = Data(emailPassword.utf8).base64EncodedString()
-    request(url: "/token",
+    request(url: "/tokens",
             httpMethod: "POST",
             httpHeaders: ["Authorization": "Basic \(base64EncodedEmailPassword)"]) {
               data, _, _ in
       do {
         let decoder = JSONDecoder()
         let token = try decoder.decode(Token.self, from: data!)
-        let encoder = try? PropertyListEncoder().encode(token)
-        UserDefaults.standard.set(encoder, forKey: String(describing: Token.self))
+        let data = try? PropertyListEncoder().encode(token)
+        UserDefaults.standard.set(data, forKey: String(describing: Token.self))
         UserDefaults.standard.synchronize()
         self.passwordField.text = ""
         self.performSegue(withIdentifier: "showShoppingList", sender: self)

@@ -28,7 +28,7 @@ class Item: Codable {
   
   func toggleCheck(onCompletion: @escaping (Item) -> Void) {
     self.isChecked = !self.isChecked
-    request(url: "/api/items/\(id!)", httpMethod: "PATCH", httpBody: data) { data, _, _ in
+    request(url: "/items/\(id!)", httpMethod: "PATCH", httpBody: data) { data, _, _ in
       let decoder = JSONDecoder()
       let item = try decoder.decode(Item.self, from: data!)
       onCompletion(item)
