@@ -5,18 +5,10 @@ class Item: Codable {
   var name: String
   var isChecked: Bool
   var shoppingListId: String
+  private let encoder = JSONEncoder()
   var data: Data? {
     get {
-      let parameters = [
-        "name": name,
-        "is_checked": isChecked,
-        "shopping_list__id": shoppingListId
-        ] as [String : Any]
-      do {
-        return try JSONSerialization.data(withJSONObject: parameters, options: [])
-      } catch {
-        return .none
-      }
+      return try! encoder.encode(self)
     }
   }
   
