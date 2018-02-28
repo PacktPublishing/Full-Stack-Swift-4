@@ -80,8 +80,8 @@ extension Item: JSONConvertible {
   convenience init(json: JSON) throws {
     self.init(
       name: try json.get(Item.Keys.name),
-      isChecked: try json.get(Item.Keys.isChecked),
-      shoppingListId: try json.get(Item.Keys.shoppingListId)
+      shoppingListId: try json.get(Item.Keys.shoppingListId),
+      isChecked: try json.get(Item.Keys.isChecked)
     )
   }
   
