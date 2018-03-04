@@ -38,8 +38,8 @@ extension Droplet {
     let persistMiddleware = PersistMiddleware(User.self)
     let sessionsMiddleware = SessionsMiddleware(memory)
     let redirect = RedirectMiddleware.login(path: "/")
-    let shoppingListController = ShoppingListController(view)
-    let itemController = ItemController(view)
+    let shoppingListController = ShoppingListController()
+    let itemController = ItemController()
     
     // Route to
     let loginRoutes = grouped([sessionsMiddleware, persistMiddleware])

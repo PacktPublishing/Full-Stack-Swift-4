@@ -5,11 +5,6 @@ protocol Replaceable {
 }
 
 class BaseResourceController<T: Model & JSONConvertible & Updateable & Replaceable>: ResourceRepresentable {
-  let view: ViewRenderer
-  init(_ view: ViewRenderer) {
-    self.view = view
-  }
-  
   func index(_ req: Request) throws -> ResponseRepresentable {
     let response = Response(status: .ok)
     let resources = try T.all()
