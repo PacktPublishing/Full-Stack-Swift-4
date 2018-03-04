@@ -5,7 +5,7 @@ extension Droplet {
     get() { req in
       Response(redirect: "/shopping_lists")
     }
-    resource("shopping_lists", ShoppingListController(view))
-    resource("items", ItemController(view))
+    resource("shopping_lists", ShoppingListController())
+    resource("items", ItemController())
   }
 }
