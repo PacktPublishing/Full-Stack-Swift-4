@@ -42,9 +42,9 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "showShoppingList", sender: self)
       } catch {
         let alertController = UIAlertController(title: "Error Logging In", message:
-          "Email or password is wrong. Please check your credentials and try again.", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
+          "Email or password is wrong. Please check your credentials and try again.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        self.present(alertController, animated: true)
       }
     }
   }
