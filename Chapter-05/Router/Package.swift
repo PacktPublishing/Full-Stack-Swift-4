@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-  name: "Hello",
+  name: "Router",
   dependencies: [
     .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.4.4")),
   ],
   targets: [
     .target(
-      name: "Hello",
+      name: "Router",
       dependencies: ["Vapor"]),
   ]
 )
